@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.myLooper()!!).postDelayed({
                 setContentView(mBinding.root)
             bottom_nav_menu.setupWithNavController(
-                navController = navHost_fragment.findNavController()
+                navController = nav_host_fragment.findNavController()
             )
             }, 5000
         )
