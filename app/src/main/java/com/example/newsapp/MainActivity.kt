@@ -21,10 +21,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.fragment_splash)
         CoroutineScope(Dispatchers.Main).launch {
             delay(5000)
+            _binding = ActivityMainBinding.inflate(layoutInflater)
             setContentView(mBinding.root)
             bottom_nav_menu.setupWithNavController(
                 navController = nav_host_fragment.findNavController()
